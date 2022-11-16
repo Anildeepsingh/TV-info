@@ -5,7 +5,7 @@ const Show = () => {
 
   useEffect(() => {
     const fetchShow = async () => {
-      const res = await fetch("https://api.tvmaze.com/search/shows?q=friends");
+      const res = await fetch("https://api.tvmaze.com/search/shows?q=naruto");
       const data = await res.json();
       console.log(data);
       setShow(data);
@@ -13,15 +13,20 @@ const Show = () => {
     fetchShow();
   }, []);
   return (
-    <div className="">
-      {show.map((y) => (
-        // const images = y.show.image === null ? "" : y.show.image.original;
+    <div className="flex flex-wrap">
+      {show.map((y) => {
+        // console.log(y)
 
-        <div key={y.show.id}>
-          {/* <img className="border" src={images} alt="" /> */}
-          <div>{y.show.id}</div>
-        </div>
-))}
+        const images = y.show.image ? y.show.image.medium : "";
+
+        return (
+          <div className="" key={y.show.id}>
+            <img className="border" src={images} alt={"No image found"}/>
+            <div>{y.show.name}</div>
+            <div>{y.show.id}</div>
+          </div>
+        );
+      })}
     </div>
   );
 };
