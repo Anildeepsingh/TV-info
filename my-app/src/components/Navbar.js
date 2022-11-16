@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Navbar = () => {
-//   const [input, setInput] = useState();
+  const [input, setInput] = useState();
 
   return (
     <div className=" bg-slate-600">
@@ -13,7 +13,7 @@ const Navbar = () => {
           name="radio"
           className="ml-4 "
           value="This is Actor"
-        //   onChange={(e) => setInput(e.target.value)}
+          onChange={(e) => setInput(e.target.value)}
         />
         <label className="p-1.5">Actor</label>
         <input
@@ -21,15 +21,15 @@ const Navbar = () => {
           name="radio"
           className="ml-4 "
           value="This is Show"
-        //   onChange={(e) => setInput(e.target.value)}
+          onChange={(e) => setInput(e.target.value)}
         />
         <label className="p-1.5">Show</label>
       </div>
-      {/* {input && (
+      {input && (
         <div className="flex justify-center">
           <input className="border" placeholder={input} />
         </div>
-      )} */}
+      )}
     </div>
   );
 };
