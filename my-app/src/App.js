@@ -1,9 +1,13 @@
-import './App.css';
+import Actor from './components/Actor';
+import Navbar from './components/Navbar';
+// import Show from './components/Show';
 
 function App() {
   return (
     <div className="App">
-     App
+     <Navbar/>
+     <Actor/>
+     {/* <Show/> */}
     </div>
   );
 }
