@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Card from "./Card";
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 const Navbar = () => {
   const [state, setState] = useState("");
@@ -8,7 +9,7 @@ const Navbar = () => {
   const [show, setShow] = useState([]);
   const [submit, setSubmit] = useState(false);
 
-  const placeholder = state === "people" ? "this is actor" : "this is show";
+  const placeholder = state === "people" ? "Here's Actor" : "Here's Show";
 
   const fetchShow = async (e) => {
     e.preventDefault();
@@ -61,7 +62,7 @@ const Navbar = () => {
               type="placeholder"
               value={input}
             />
-            <button className="bg-red-200 w-10 rounded-lg">get</button>
+            <SearchOutlinedIcon className="bg-red-200 w-10 rounded-lg"/>
           </div>
         </form>
       )}
