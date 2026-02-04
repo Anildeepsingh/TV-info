@@ -1,13 +1,13 @@
-// import Actor from './components/Actor';
+import Actor from './components/Actor';
 import Navbar from './components/Navbar';
-// import Show from './components/Show';
+import Show from './components/Show';
 
 function App() {
   return (
     <div className="App">
      <Navbar/>
-     {/* <Actor/> */}
-     {/* <Show/> */}
+     <Actor/>
+     <Show/>
     </div>
   );
 }
