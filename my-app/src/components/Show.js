@@ -12,23 +12,23 @@ const Show = () => {
     };
     fetchShow();
   }, []);
-  return (
-    <div className="flex flex-wrap">
-      {show.map((y) => {
-        // console.log(y)
+  // return (
+  //   <div className="flex flex-wrap">
+  //     {show.map((y) => {
+  //       // console.log(y)
 
-        const images = y.show.image ? y.show.image.medium : "";
+  //       const images = y.show.image ? y.show.image.medium : "";
 
-        return (
-          <div className="" key={y.show.id}>
-            <img className="border" src={images} alt={"No image found"}/>
-            <div>{y.show.name}</div>
-            <div>{y.show.id}</div>
-          </div>
-        );
-      })}
-    </div>
-  );
+  // //       return (
+  //         <div className="" key={y.show.id}>
+  //           <img className="border" src={images} alt={"No image found"}/>
+  //           <div>{y.show.name}</div>
+  //           <div>{y.show.id}</div>
+  //         </div>
+  //       );
+  //     })}
+  //   </div>
+  // );
 };
 
 export default Show;
